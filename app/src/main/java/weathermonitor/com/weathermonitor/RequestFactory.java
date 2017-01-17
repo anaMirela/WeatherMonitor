@@ -14,9 +14,10 @@ import java.net.URL;
 
 public class RequestFactory {
 
-    public static final String SERVER_URL ="http://192.168.0.100/server_weather_app/index.php";//"http://192.168.0.100/server_weather_app/index.php";
+    public static final String SERVER_URL ="http://172.19.10.6/server_weather_app/index.php";//"http://192.168.0.100/server_weather_app/index.php";
 
     public InputStream createGetRequest(String query) {
+        System.out.println(">>>>>>>>>>>>>>request is " +SERVER_URL + query);
         HttpURLConnection con;
         try {
             con = (HttpURLConnection) new URL(SERVER_URL + query).openConnection();
